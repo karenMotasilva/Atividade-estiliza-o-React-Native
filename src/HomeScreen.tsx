@@ -29,22 +29,26 @@ export function HomeScreen() {
             <ScrollView>
 
                 <View style={styles.cabecaTexto}>
+                    <View style={styles.inicio}>
 
-                    <View >
-                        <Text style={{ color: '#DCCCFB', fontSize: 12 }}>
-                            Olá, Nádia!
-                        </Text>
-                        <Text style={styles.titulo}>
-                            Vamos praticar hoje?
-                        </Text>
-                        <View style={styles.perfil}></View>
-                        <View style={styles.busca}>
-                            <Text style={{ color: '#999999', fontSize: 13 }}>
-                                Buscar aula
+                        <View style={styles.saudacao} >
+                            <Text style={{ color: '#DCCCFB', fontSize: 12 }}>
+                                Olá, Nádia!
+                            </Text>
+                            <Text style={styles.titulo}>
+                                Vamos praticar hoje?
                             </Text>
                         </View>
-
+                           <View style={styles.perfil}/>
                     </View>
+
+                 
+                    <View style={styles.busca}>
+                        <Text style={{ color: '#999999', fontSize: 13 }}>
+                            Buscar aula
+                        </Text>
+                    </View>
+
                 </View>
                 <View style={styles.categorias}>{['Vocabs',
                     'Regras',
@@ -120,10 +124,14 @@ const styles = StyleSheet.create({
     cabecaTexto: {
         backgroundColor: '#693CC7',
         paddingHorizontal: 16,
-        paddingTop: 18,
+        paddingTop: 100,
         paddingBottom: 60,
         borderBottomLeftRadius: 28,
         borderBottomRightRadius: 28
+    },
+    saudacao: {
+        flex: 1,
+        marginRight: 8
     },
     hora: {
         color: 'white',
@@ -132,7 +140,6 @@ const styles = StyleSheet.create({
     },
     inicio: {
         marginBottom: 24,
-        marginTop: 12,
         alignItems: 'center',
         justifyContent: 'space-between',
         flexDirection: 'row'
@@ -149,14 +156,16 @@ const styles = StyleSheet.create({
         height: 40,
         borderWidth: 2,
         backgroundColor: '#F5C9D8',
-        borderColor: 'white'
+        borderColor: 'white',
+        marginTop: 20
     },
     busca: {
         borderRadius: 25,
         backgroundColor: 'white',
         justifyContent: 'center',
         paddingHorizontal: 16,
-        height: 42
+        height: 45,
+
     },
     categorias: {
         flexDirection: 'row',
